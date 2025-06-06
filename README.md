@@ -28,3 +28,5 @@ This repository is used to store materials and assignments for the **Object-Orie
 - Python 3.x  
 - Google Colab
 - Terminal / CLI  
+
+> _This repository is created as a personal learning documentation and for academic purposes only._
