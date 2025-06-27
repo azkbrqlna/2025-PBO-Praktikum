@@ -1,7 +1,7 @@
-# setup_db_pengeluaran.py
 import sqlite3
 import os
 from konfigurasi import DB_PATH  # Ambil path dari konfigurasi
+
 
 def setup_database():
     print(f"Memeriksa/membuat database di: {DB_PATH}")
@@ -31,10 +31,10 @@ def setup_database():
             conn.close()
             print("-> Koneksi DB setup ditutup.")
 
+
 if __name__ == "__main__":
     print("--- Memulai Setup Database Pengeluaran ---")
     if setup_database():
         print(f"\nSetup database '{os.path.basename(DB_PATH)}' selesai.")
     else:
-        print("\nSetup database GAGAL.")
-    print("--- Setup Database Selesai ---")
+        print("--- Setup Database GAGAL ---")
