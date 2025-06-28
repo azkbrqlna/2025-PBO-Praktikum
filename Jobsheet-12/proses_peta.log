@@ -2,3 +2,11 @@
 [2025-06-12 15:20:03] [buat_peta_lokasi_folium] Peta 'peta_interaktif_semarang.html' berhasil dibuat dengan 10 marker.
 [2025-06-12 15:20:03] [buat_peta_lokasi_folium] Memulai pembuatan peta 'peta_kedua.html' dengan 10 lokasi.
 [2025-06-12 15:20:03] [buat_peta_lokasi_folium] Peta 'peta_kedua.html' berhasil dibuat dengan 10 marker.
+[2025-06-28 17:47:17] [buat_peta_lokasi_folium] Memulai pembuatan peta 'peta_interaktif_semarang.html'.
+[2025-06-28 17:47:18] [buat_peta_lokasi_folium] Peta 'peta_interaktif_semarang.html' berhasil dibuat dengan 13 marker.
+[2025-06-28 18:00:00] [buat_peta_lokasi_folium] WARNING saat baca 'config_peta.txt': [Errno 2] No such file or directory: 'config_peta.txt'
+[2025-06-28 18:00:00] [buat_peta_lokasi_folium] Peta 'peta_interaktif_semarang.html' dibuat. Marker: 13
+[2025-06-28 18:01:08] [buat_peta_lokasi_folium] WARNING saat baca 'config_peta.txt': list index out of range
+[2025-06-28 18:01:08] [buat_peta_lokasi_folium] Peta 'peta_interaktif_semarang.html' dibuat. Marker: 13
+[2025-06-28 18:02:19] [buat_peta_lokasi_folium] Peta 'peta_interaktif_semarang.html' dibuat. Marker: 13
+[2025-06-28 18:02:45] [buat_peta_lokasi_folium] Peta 'peta_interaktif_semarang.html' dibuat. Marker: 13

@@ -1,0 +1,197 @@
+[
+  {
+    "category": "Matematika",
+    "question": "Berapa hasil dari 15 + 27?",
+    "options": ["40", "42", "44", "46"],
+    "answer": "42",
+    "difficulty": "Easy",
+    "explanation": "15 + 27 = 42. Ini adalah operasi penjumlahan dasar."
+  },
+  {
+    "category": "Matematika",
+    "question": "Berapa hasil dari 8 × 9?",
+    "options": ["72", "81", "64", "56"],
+    "answer": "72",
+    "difficulty": "Easy",
+    "explanation": "8 × 9 = 72. Ini adalah perkalian dasar dari tabel perkalian."
+  },
+  {
+    "category": "Matematika",
+    "question": "Berapa akar kuadrat dari 144?",
+    "options": ["10", "11", "12", "13"],
+    "answer": "12",
+    "difficulty": "Medium",
+    "explanation": "√144 = 12, karena 12 × 12 = 144."
+  },
+  {
+    "category": "Matematika",
+    "question": "Berapa hasil dari 2³ + 3²?",
+    "options": ["17", "15", "13", "19"],
+    "answer": "17",
+    "difficulty": "Medium",
+    "explanation": "2³ = 8 dan 3² = 9, jadi 8 + 9 = 17."
+  },
+  {
+    "category": "Matematika",
+    "question": "Jika f(x) = 2x + 3, berapa f(5)?",
+    "options": ["11", "13", "15", "17"],
+    "answer": "13",
+    "difficulty": "Hard",
+    "explanation": "f(5) = 2(5) + 3 = 10 + 3 = 13."
+  },
+  {
+    "category": "Sejarah Indonesia",
+    "question": "Kapan Indonesia memproklamasikan kemerdekaannya?",
+    "options": [
+      "17 Agustus 1945",
+      "17 Agustus 1944",
+      "16 Agustus 1945",
+      "18 Agustus 1945"
+    ],
+    "answer": "17 Agustus 1945",
+    "difficulty": "Easy",
+    "explanation": "Indonesia memproklamasikan kemerdekaan pada tanggal 17 Agustus 1945 oleh Soekarno dan Mohammad Hatta."
+  },
+  {
+    "category": "Sejarah Indonesia",
+    "question": "Siapa presiden pertama Indonesia?",
+    "options": ["Soekarno", "Soeharto", "B.J. Habibie", "Megawati"],
+    "answer": "Soekarno",
+    "difficulty": "Easy",
+    "explanation": "Soekarno adalah presiden pertama Republik Indonesia yang menjabat dari 1945-1967."
+  },
+  {
+    "category": "Sejarah Indonesia",
+    "question": "Apa nama organisasi pemuda yang mengikrarkan Sumpah Pemuda?",
+    "options": [
+      "Budi Utomo",
+      "Jong Java",
+      "Perhimpunan Indonesia",
+      "Kongres Pemuda Indonesia"
+    ],
+    "answer": "Kongres Pemuda Indonesia",
+    "difficulty": "Medium",
+    "explanation": "Sumpah Pemuda dikrarkan pada Kongres Pemuda Indonesia II pada 28 Oktober 1928."
+  },
+  {
+    "category": "Sejarah Indonesia",
+    "question": "Siapa yang memimpin perlawanan terhadap Belanda di Aceh?",
+    "options": [
+      "Cut Nyak Dien",
+      "Teuku Umar",
+      "Sultan Hasanuddin",
+      "Pattimura"
+    ],
+    "answer": "Cut Nyak Dien",
+    "difficulty": "Medium",
+    "explanation": "Cut Nyak Dien adalah pahlawan wanita Aceh yang memimpin perlawanan terhadap Belanda dalam Perang Aceh."
+  },
+  {
+    "category": "Sejarah Indonesia",
+    "question": "Apa nama perjanjian yang mengakhiri Perang Diponegoro?",
+    "options": [
+      "Perjanjian Giyanti",
+      "Perjanjian Tuntang",
+      "Perjanjian Salatiga",
+      "Perjanjian Bongaya"
+    ],
+    "answer": "Perjanjian Tuntang",
+    "difficulty": "Hard",
+    "explanation": "Perjanjian Tuntang ditandatangani pada 1829 yang mengakhiri Perang Diponegoro (1825-1830)."
+  },
+  {
+    "category": "Geografi",
+    "question": "Apa ibu kota Indonesia?",
+    "options": ["Jakarta", "Surabaya", "Bandung", "Medan"],
+    "answer": "Jakarta",
+    "difficulty": "Easy",
+    "explanation": "Jakarta adalah ibu kota dan kota terbesar di Indonesia."
+  },
+  {
+    "category": "Geografi",
+    "question": "Pulau terbesar di Indonesia adalah?",
+    "options": ["Jawa", "Sumatera", "Kalimantan", "Papua"],
+    "answer": "Kalimantan",
+    "difficulty": "Easy",
+    "explanation": "Kalimantan adalah pulau terbesar di Indonesia dengan luas sekitar 743.330 km²."
+  },
+  {
+    "category": "Geografi",
+    "question": "Gunung tertinggi di Indonesia adalah?",
+    "options": [
+      "Gunung Semeru",
+      "Gunung Kerinci",
+      "Puncak Jaya",
+      "Gunung Rinjani"
+    ],
+    "answer": "Puncak Jaya",
+    "difficulty": "Medium",
+    "explanation": "Puncak Jaya (Carstensz Pyramid) di Papua adalah gunung tertinggi di Indonesia dengan ketinggian 4.884 meter."
+  },
+  {
+    "category": "Geografi",
+    "question": "Selat yang memisahkan Pulau Jawa dan Sumatera adalah?",
+    "options": [
+      "Selat Malaka",
+      "Selat Sunda",
+      "Selat Lombok",
+      "Selat Makassar"
+    ],
+    "answer": "Selat Sunda",
+    "difficulty": "Medium",
+    "explanation": "Selat Sunda memisahkan Pulau Jawa dan Sumatera, menghubungkan Laut Jawa dengan Samudra Hindia."
+  },
+  {
+    "category": "Geografi",
+    "question": "Danau terbesar di Indonesia adalah?",
+    "options": [
+      "Danau Toba",
+      "Danau Singkarak",
+      "Danau Maninjau",
+      "Danau Sentani"
+    ],
+    "answer": "Danau Toba",
+    "difficulty": "Hard",
+    "explanation": "Danau Toba di Sumatera Utara adalah danau vulkanik terbesar di Indonesia dan Asia Tenggara."
+  },
+  {
+    "category": "Sains",
+    "question": "Apa simbol kimia untuk air?",
+    "options": ["H2O", "CO2", "NaCl", "O2"],
+    "answer": "H2O",
+    "difficulty": "Easy",
+    "explanation": "H2O adalah rumus kimia air, terdiri dari 2 atom hidrogen dan 1 atom oksigen."
+  },
+  {
+    "category": "Sains",
+    "question": "Planet terdekat dengan Matahari adalah?",
+    "options": ["Venus", "Mars", "Merkurius", "Bumi"],
+    "answer": "Merkurius",
+    "difficulty": "Easy",
+    "explanation": "Merkurius adalah planet terdekat dengan Matahari dalam tata surya kita."
+  },
+  {
+    "category": "Sains",
+    "question": "Berapa kecepatan cahaya dalam ruang hampa?",
+    "options": ["300.000 km/s", "150.000 km/s", "450.000 km/s", "200.000 km/s"],
+    "answer": "300.000 km/s",
+    "difficulty": "Medium",
+    "explanation": "Kecepatan cahaya dalam ruang hampa adalah sekitar 299.792.458 m/s atau sekitar 300.000 km/s."
+  },
+  {
+    "category": "Sains",
+    "question": "Apa gas yang paling banyak di atmosfer Bumi?",
+    "options": ["Oksigen", "Nitrogen", "Karbon Dioksida", "Argon"],
+    "answer": "Nitrogen",
+    "difficulty": "Medium",
+    "explanation": "Nitrogen menyusun sekitar 78% dari atmosfer Bumi, sementara oksigen sekitar 21%."
+  },
+  {
+    "category": "Sains",
+    "question": "Apa alat untuk mengukur suhu disebut?",
+    "options": ["Barometer", "Termometer", "Altimeter", "Anemometer"],
+    "answer": "Termometer",
+    "difficulty": "Easy",
+    "explanation": "Termometer digunakan untuk mengukur suhu dalam satuan Celsius atau Fahrenheit."
+  }
+]
