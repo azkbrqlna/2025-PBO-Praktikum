@@ -193,5 +193,50 @@
     "answer": "Termometer",
     "difficulty": "Easy",
     "explanation": "Termometer digunakan untuk mengukur suhu dalam satuan Celsius atau Fahrenheit."
+  },
+  {
+    "category": "Matematika",
+    "question": "Jika x = 3 dan y = 4, berapa nilai dari x² + y²?",
+    "options": ["12", "25", "7", "5"],
+    "answer": "25",
+    "difficulty": "Medium",
+    "explanation": "x² = 9 dan y² = 16, maka 9 + 16 = 25."
+  },
+  {
+    "category": "Sejarah Indonesia",
+    "question": "Kapan BPUPKI dibentuk?",
+    "options": [
+      "29 Mei 1945",
+      "1 Juni 1945",
+      "17 Agustus 1945",
+      "14 Agustus 1945"
+    ],
+    "answer": "29 Mei 1945",
+    "difficulty": "Hard",
+    "explanation": "BPUPKI dibentuk pada 29 Mei 1945 untuk mempersiapkan kemerdekaan Indonesia."
+  },
+  {
+    "category": "Geografi",
+    "question": "Apa ibu kota provinsi Kalimantan Timur?",
+    "options": ["Samarinda", "Balikpapan", "Banjarmasin", "Pontianak"],
+    "answer": "Samarinda",
+    "difficulty": "Medium",
+    "explanation": "Samarinda adalah ibu kota Kalimantan Timur."
+  },
+  {
+    "category": "Sains",
+    "question": "Apa planet terbesar di tata surya?",
+    "options": ["Saturnus", "Jupiter", "Uranus", "Neptunus"],
+    "answer": "Jupiter",
+    "difficulty": "Easy",
+    "explanation": "Jupiter adalah planet terbesar dengan diameter lebih dari 142.000 km."
+  },
+  {
+    "category": "Sains",
+    "question": "Alat untuk mengukur tekanan udara disebut?",
+    "options": ["Termometer", "Barometer", "Anemometer", "Higrometer"],
+    "answer": "Barometer",
+    "difficulty": "Medium",
+    "explanation": "Barometer adalah alat untuk mengukur tekanan udara dalam meteorologi."
   }
 ]

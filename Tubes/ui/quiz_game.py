@@ -165,7 +165,7 @@ class QuizDuelGame:
 
         self.players = [Player(name1), Player(name2)]
         for player in self.players:
-            player.reset_stats()  # Reset stats for new game
+            player.reset_stats()  
         self.game_mode = self.mode_var.get()
         selected_category = self.category_combobox.get()
 
@@ -205,7 +205,16 @@ class QuizDuelGame:
         tk.Label(frame, text=f"Giliran: {current_player.name}",
                 font=("Arial", 14), fg="#2980b9", bg="#f0f0f0").pack(pady=5)
 
-        # Pertanyaan (benar-benar di tengah)
+        difficulty_colors = {
+                "Easy": "#2ecc71",     
+                "Medium": "#f1c40f",   
+                "Hard": "#e74c3c"      
+            }
+        difficulty_color = difficulty_colors.get(current_question.difficulty)
+
+        tk.Label(frame, text=f"Tingkat Kesulitan: {current_question.difficulty}",
+                font=("Arial", 12, "bold"), fg=difficulty_color, bg="#f0f0f0").pack(pady=2)
+        
         question_label = tk.Label(frame, text=current_question.question,
                                 font=("Arial", 14), wraplength=600,
                                 justify="center", bg="#f0f0f0")

@@ -86,17 +86,6 @@ class Question:
         random.shuffle(shuffled)
         return shuffled
     
-    def get_hint(self):
-        """
-        Memberikan hint untuk pertanyaan.
-        
-        Returns:
-            str: Hint pertanyaan
-        """
-        if len(self.answer) > 1:
-            return f"Hint: Jawaban dimulai dengan huruf '{self.answer[0]}'"
-        return "Hint: Jawaban hanya satu huruf"
-    
     def validate_question(self):
         """
         Memvalidasi kelengkapan data pertanyaan.
