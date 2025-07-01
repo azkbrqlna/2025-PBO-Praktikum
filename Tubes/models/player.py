@@ -1,90 +1,49 @@
+"""Player model for Quiz Duel Game."""
+
+
 class Player:
-    """
-    Class untuk merepresentasikan pemain dalam permainan Quiz Duel.
+    """Represents a player in the game with score tracking."""
     
-    Attributes:
-        name (str): Nama pemain
-        score (int): Skor pemain
-        correct_answers (int): Jumlah jawaban benar
-        total_answers (int): Total jawaban yang diberikan
-    """
-    
-    def __init__(self, name):
-        """
-        Inisialisasi objek Player.
+    def __init__(self, name: str):
+        """Initialize a new player.
         
         Args:
-            name (str): Nama pemain
+            name: The player's name
         """
         self.name = name
         self.score = 0
         self.correct_answers = 0
         self.total_answers = 0
-    
-    def add_score(self, points=1):
-        """
-        Menambah skor pemain.
+
+    def add_score(self, points: int = 100) -> None:
+        """Add points to the player's score.
         
         Args:
-            points (int): Jumlah poin yang ditambahkan (default: 1)
+            points: Points to add (default 100)
         """
         self.score += points
         self.correct_answers += 1
-    
-    def add_attempt(self):
-        """
-        Menambah jumlah total percobaan jawaban.
-        """
+
+    def add_attempt(self) -> None:
+        """Record an answer attempt."""
         self.total_answers += 1
-    
-    def get_accuracy(self):
-        """
-        Menghitung akurasi pemain.
+
+    def get_accuracy(self) -> float:
+        """Calculate the player's answer accuracy.
         
         Returns:
-            float: Persentase akurasi (0-100)
+            Accuracy percentage (0-100)
         """
         if self.total_answers == 0:
             return 0.0
         return (self.correct_answers / self.total_answers) * 100
-    
-    def reset_stats(self):
-        """
-        Reset statistik pemain untuk permainan baru.
-        """
+
+    def reset_stats(self) -> None:
+        """Reset all player statistics."""
         self.score = 0
         self.correct_answers = 0
         self.total_answers = 0
-    
-    def __str__(self):
-        """
-        String representation dari objek Player.
-        
-        Returns:
-            str: Informasi pemain dalam format string
-        """
-        return f"Player: {self.name}, Score: {self.score}, Accuracy: {self.get_accuracy():.1f}%"
-    
-    def __repr__(self):
-        """
-        Developer representation dari objek Player.
-        
-        Returns:
-            str: Representasi untuk debugging
-        """
-        return f"Player(name='{self.name}', score={self.score})"
-    
-    def to_dict(self):
-        """
-        Konversi objek Player ke dictionary untuk serialisasi.
-        
-        Returns:
-            dict: Data pemain dalam format dictionary
-        """
-        return {
-            "name": self.name,
-            "score": self.score,
-            "correct_answers": self.correct_answers,
-            "total_answers": self.total_answers,
-            "accuracy": self.get_accuracy()
-        }
+
+    def __str__(self) -> str:
+        """String representation of the player."""
+        return f"{self.name} (Score: {self.score}, Accuracy: {self.get_accuracy():.1f}%)"

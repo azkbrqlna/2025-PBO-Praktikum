@@ -11,10 +11,7 @@ from models.player import Player
 class QuizDuelGame:
     def __init__(self, root):
         self.root = root
-        self.root.title("Quiz Duel Game - Tugas Besar OOP")
-        self.root.geometry("800x600")
-        self.root.resizable(True, True)
-
+  
         self.players = []
         self.questions = []
         self.filtered_questions = []
@@ -63,38 +60,11 @@ class QuizDuelGame:
                 data = json.load(f)
             self.questions = [Question(**q) for q in data]
             if not self.questions:
-                print("⚠️ Tidak ada soal ditemukan. Membuat soal sampel.")
-                self.create_sample_questions()
+                print("⚠️ Tidak ada soal ditemukan.")
         except FileNotFoundError:
-            print("⚠️ File questions.json tidak ditemukan. Membuat soal sampel.")
-            self.create_sample_questions()
+            print("⚠️ File questions.json tidak ditemukan.")
         except Exception as e:
             messagebox.showerror("Error", f"Error loading questions: {str(e)}")
-
-    def create_sample_questions(self):
-        """Create sample questions if questions.json is missing or empty."""
-        sample_data = [
-            {
-                "category": "Matematika",
-                "question": "Berapa hasil dari 2 + 2?",
-                "options": ["3", "4", "5", "6"],
-                "answer": "4",
-                "difficulty": "Easy",
-                "explanation": "2 + 2 = 4 adalah operasi penjumlahan dasar"
-            },
-            {
-                "category": "Sejarah",
-                "question": "Siapa proklamator kemerdekaan Indonesia?",
-                "options": ["Soekarno-Hatta", "Tan Malaka", "Sjahrir", "Diponegoro"],
-                "answer": "Soekarno-Hatta",
-                "difficulty": "Medium",
-                "explanation": "Soekarno dan Mohammad Hatta memproklamasikan kemerdekaan Indonesia pada 17 Agustus 1945"
-            }
-        ]
-        os.makedirs("data", exist_ok=True)
-        with open("data/questions.json", "w", encoding="utf-8") as f:
-            json.dump(sample_data, f, indent=2, ensure_ascii=False)
-        self.questions = [Question(**q) for q in sample_data]
 
     def setup_start_screen(self):
         """Set up the start screen with player input and game settings."""
@@ -103,13 +73,9 @@ class QuizDuelGame:
         main_frame = tk.Frame(self.root, bg="#f0f0f0")
         main_frame.pack(fill="both", expand=True, padx=20, pady=20)
 
-        title_label = tk.Label(main_frame, text="🎮 Quiz Duel Game",
-                               font=("Arial", 28, "bold"), bg="#f0f0f0", fg="#2c3e50")
+        title_label = tk.Label(main_frame, text="Quiz Duel Game",
+                               font=("Arial", 24, "bold"), bg="#f0f0f0", fg="#2c3e50")
         title_label.pack(pady=20)
-
-        subtitle_label = tk.Label(main_frame, text="Tugas Besar Object-Oriented Programming",
-                                  font=("Arial", 12), bg="#f0f0f0", fg="#7f8c8d")
-        subtitle_label.pack(pady=5)
 
         input_frame = tk.LabelFrame(main_frame, text="Setup Pemain",
                                     font=("Arial", 14, "bold"), bg="#f0f0f0")
@@ -142,8 +108,8 @@ class QuizDuelGame:
             tk.Radiobutton(mode_frame, text=text, variable=self.mode_var, value=value,
                            font=("Arial", 10), bg="#f0f0f0").pack(side="left", padx=10)
 
-        start_button = tk.Button(main_frame, text="🚀 Mulai Permainan", command=self.start_game,
-                                 font=("Arial", 14), bg="#27ae60", fg="white", width=20, height=2)
+        start_button = tk.Button(main_frame, text="Start", command=self.start_game,
+                                 font=("Arial", 14, "bold"), bg="#27ae60", fg="white", width=15, height=2, borderwidth=0)
         start_button.pack(pady=20)
 
     def get_categories(self):
@@ -233,8 +199,8 @@ class QuizDuelGame:
                         font=("Arial", 12), bg="#f0f0f0", anchor="w").pack(anchor="w", padx=40, pady=2)
 
         # Tombol submit
-        submit_btn = tk.Button(frame, text="Submit Jawaban", bg="#27ae60", fg="white",
-                            font=("Arial", 12), command=self.check_answer)
+        submit_btn = tk.Button(frame, text="Submit", bg="#27ae60", fg="white",  borderwidth=0, width=10,
+                            font=("Arial", 12, "bold"), command=self.check_answer)
         submit_btn.pack(pady=20)
 
         # Timer (jika mode timed)

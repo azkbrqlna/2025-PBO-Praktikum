@@ -1,29 +1,28 @@
+"""Question model for Quiz Duel Game."""
 import random
+from typing import List, Dict
+
 
 class Question:
-    """
-    Class untuk merepresentasikan pertanyaan dalam permainan Quiz Duel.
+    """Represents a quiz question with answers and metadata."""
     
-    Attributes:
-        category (str): Kategori pertanyaan
-        question (str): Teks pertanyaan
-        options (list): List pilihan jawaban
-        answer (str): Jawaban yang benar
-        difficulty (str): Tingkat kesulitan pertanyaan
-        explanation (str): Penjelasan jawaban
-    """
-    
-    def __init__(self, category, question, options, answer, difficulty="Medium", explanation=""):
-        """
-        Inisialisasi objek Question.
+    DIFFICULTY_POINTS = {
+        "Easy": 1,
+        "Medium": 2,
+        "Hard": 3
+    }
+
+    def __init__(self, category: str, question: str, options: List[str], 
+                 answer: str, difficulty: str = "Medium", explanation: str = ""):
+        """Initialize a new question.
         
         Args:
-            category (str): Kategori pertanyaan
-            question (str): Teks pertanyaan
-            options (list): List pilihan jawaban
-            answer (str): Jawaban yang benar
-            difficulty (str): Tingkat kesulitan (Easy, Medium, Hard)
-            explanation (str): Penjelasan jawaban
+            category: Question category
+            question: The question text
+            options: List of answer options
+            answer: Correct answer
+            difficulty: Difficulty level (Easy/Medium/Hard)
+            explanation: Explanation of the answer
         """
         self.category = category
         self.question = question
@@ -33,98 +32,56 @@ class Question:
         self.explanation = explanation
         self.times_asked = 0
         self.times_correct = 0
-    
-    def is_correct(self, choice):
-        """
-        Mengecek apakah pilihan jawaban benar.
+
+    def is_correct(self, choice: str) -> bool:
+        """Check if the chosen answer is correct.
         
         Args:
-            choice (str): Pilihan jawaban yang dipilih
+            choice: The selected answer
             
         Returns:
-            bool: True jika benar, False jika salah
+            True if correct, False otherwise
         """
         self.times_asked += 1
-        is_right = choice == self.answer
-        if is_right:
+        is_correct = choice == self.answer
+        if is_correct:
             self.times_correct += 1
-        return is_right
-    
-    def get_difficulty_points(self):
-        """
-        Mendapatkan poin berdasarkan tingkat kesulitan.
+        return is_correct
+
+    def get_difficulty_points(self) -> int:
+        """Get points based on question difficulty.
         
         Returns:
-            int: Jumlah poin yang diberikan
+            Points value for this question
         """
-        difficulty_points = {
-            "Easy": 1,
-            "Medium": 2,
-            "Hard": 3
-        }
-        return difficulty_points.get(self.difficulty, 1)
-    
-    def get_success_rate(self):
-        """
-        Menghitung tingkat keberhasilan pertanyaan.
+        return self.DIFFICULTY_POINTS.get(self.difficulty, 1)
+
+    def shuffle_options(self) -> List[str]:
+        """Return a shuffled copy of the answer options.
         
         Returns:
-            float: Persentase keberhasilan (0-100)
+            Shuffled list of options
         """
-        if self.times_asked == 0:
-            return 0.0
-        return (self.times_correct / self.times_asked) * 100
-    
-    def shuffle_options(self):
-        """
-        Mengacak urutan pilihan jawaban.
+        return random.sample(self.options, len(self.options))
+
+    def validate(self) -> bool:
+        """Validate the question data.
         
         Returns:
-            list: List pilihan jawaban yang sudah diacak
+            True if valid, False otherwise
         """
-        shuffled = self.options.copy()
-        random.shuffle(shuffled)
-        return shuffled
-    
-    def validate_question(self):
-        """
-        Memvalidasi kelengkapan data pertanyaan.
-        
-        Returns:
-            bool: True jika valid, False jika tidak
-        """
-        if not self.question or not self.options or not self.answer:
-            return False
-        if len(self.options) < 2:
-            return False
-        if self.answer not in self.options:
-            return False
-        return True
-    
-    def __str__(self):
-        """
-        String representation dari objek Question.
-        
-        Returns:
-            str: Informasi pertanyaan dalam format string
-        """
+        return (self.question and len(self.options) >= 2 and 
+                self.answer in self.options)
+
+    def __str__(self) -> str:
+        """String representation of the question."""
         return f"[{self.category}] {self.question[:50]}..."
-    
-    def __repr__(self):
-        """
-        Developer representation dari objek Question.
+
+    def to_dict(self) -> Dict:
+        """Convert question to dictionary for serialization.
         
         Returns:
-            str: Representasi untuk debugging
-        """
-        return f"Question(category='{self.category}', difficulty='{self.difficulty}')"
-    
-    def to_dict(self):
-        """
-        Konversi objek Question ke dictionary untuk serialisasi.
-        
-        Returns:
-            dict: Data pertanyaan dalam format dictionary
+            Dictionary representation of the question
         """
         return {
             "category": self.category,
@@ -132,8 +89,5 @@ class Question:
             "options": self.options,
             "answer": self.answer,
             "difficulty": self.difficulty,
-            "explanation": self.explanation,
-            "times_asked": self.times_asked,
-            "times_correct": self.times_correct,
-            "success_rate": self.get_success_rate()
+            "explanation": self.explanation
         }
