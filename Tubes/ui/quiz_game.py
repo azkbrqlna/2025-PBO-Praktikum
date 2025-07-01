@@ -221,16 +221,22 @@ class QuizDuelGame:
             self.check_answer(time_up=True)
 
     def check_answer(self, time_up=False):
-        """Check the selected answer and update scores."""
+        """Periksa jawaban yang dipilih dan perbarui skor."""
+        # Cegah timer jalan terus setelah jawaban masuk
+        if self.timer_job:
+            self.root.after_cancel(self.timer_job)
+            self.timer_job = None
+
         current_question = self.filtered_questions[self.current_index]
         current_player = self.players[self.turn % 2]
         selected = "" if time_up else self.answer_var.get()
 
-        current_player.add_attempt()
-
+        # Kalau tidak pilih jawaban (dan bukan karena waktu habis), beri peringatan
         if not selected and not time_up:
             messagebox.showwarning("Peringatan", "Pilih salah satu jawaban terlebih dahulu!")
             return
+
+        current_player.add_attempt()
 
         is_correct = current_question.is_correct(selected)
         explanation = f"\nPenjelasan: {current_question.explanation}" if self.settings["show_explanation"] else ""
@@ -240,12 +246,16 @@ class QuizDuelGame:
             current_player.add_score(points)
             messagebox.showinfo("Benar!", f"✅ Jawaban benar!\nSkor: {current_player.score}{explanation}")
         else:
-            message = f"❌ Jawaban salah.\nJawaban benar: {current_question.answer}{explanation}"
             if time_up:
                 message = f"❌ Waktu habis!\nJawaban benar: {current_question.answer}{explanation}"
+            else:
+                message = f"❌ Jawaban salah.\nJawaban benar: {current_question.answer}{explanation}"
             messagebox.showinfo("Salah!", message)
 
+        # Tambahkan giliran (ganti pemain)
         self.turn += 1
+
+        # Kalau dua pemain sudah menjawab soal ini, lanjut ke soal berikutnya
         if self.turn % 2 == 0:
             self.current_index += 1
 
