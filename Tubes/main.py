@@ -2,7 +2,6 @@
 Quiz Duel Game - Tugas Besar Object-Oriented Programming
 ========================================================
 Author: Azka Bariqlana
-NIM: 4.33.24.1.04
 """
 
 import tkinter as tk
@@ -10,7 +9,7 @@ from tkinter import messagebox
 import sys
 import os
 
-# Tambahkan path untuk import modules
+# untuk import modules
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 try:

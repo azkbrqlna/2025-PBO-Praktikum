@@ -3,7 +3,6 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 import json
 import random
-import os
 
 from models.question import Question
 from models.player import Player
