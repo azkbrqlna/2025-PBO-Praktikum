@@ -55,39 +55,3 @@ class Question:
             Points value for this question
         """
         return self.DIFFICULTY_POINTS.get(self.difficulty, 1)
-
-    def shuffle_options(self) -> List[str]:
-        """Return a shuffled copy of the answer options.
-        
-        Returns:
-            Shuffled list of options
-        """
-        return random.sample(self.options, len(self.options))
-
-    def validate(self) -> bool:
-        """Validate the question data.
-        
-        Returns:
-            True if valid, False otherwise
-        """
-        return (self.question and len(self.options) >= 2 and 
-                self.answer in self.options)
-
-    def __str__(self) -> str:
-        """String representation of the question."""
-        return f"[{self.category}] {self.question[:50]}..."
-
-    def to_dict(self) -> Dict:
-        """Convert question to dictionary for serialization.
-        
-        Returns:
-            Dictionary representation of the question
-        """
-        return {
-            "category": self.category,
-            "question": self.question,
-            "options": self.options,
-            "answer": self.answer,
-            "difficulty": self.difficulty,
-            "explanation": self.explanation
-        }

@@ -44,6 +44,3 @@ class Player:
         self.correct_answers = 0
         self.total_answers = 0
 
-    def __str__(self) -> str:
-        """String representation of the player."""
-        return f"{self.name} (Score: {self.score}, Accuracy: {self.get_accuracy():.1f}%)"

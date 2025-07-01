@@ -262,18 +262,18 @@ class QuizDuelGame:
         frame = tk.Frame(self.root, bg="#f0f0f0")
         frame.pack(fill="both", expand=True, padx=20, pady=20)
 
-        tk.Label(frame, text="🎉 Permainan Selesai!", font=("Arial", 20, "bold"),
+        tk.Label(frame, text="Permainan Selesai!", font=("Arial", 20, "bold"),
                  bg="#f0f0f0").pack(pady=20)
 
         if draw:
             tk.Label(frame, text="Hasil: Seri!", font=("Arial", 16), bg="#f0f0f0").pack(pady=10)
         else:
-            tk.Label(frame, text=f"Pemenang: {winner.name} 🏆", font=("Arial", 16),
+            tk.Label(frame, text=f"Pemenang: {winner.name}", font=("Arial", 16),
                      bg="#f0f0f0").pack(pady=10)
 
         for player in self.players:
             tk.Label(frame, text=f"{player.name}: {player.score} poin (Akurasi: {player.get_accuracy():.1f}%)",
                      font=("Arial", 14), bg="#f0f0f0").pack(pady=5)
 
-        tk.Button(frame, text="Main Lagi", font=("Arial", 12), bg="#27ae60", fg="white",
+        tk.Button(frame, text="Main Lagi", font=("Arial", 12), bg="#27ae60", fg="white", borderwidth=0,
                   command=self.setup_start_screen).pack(pady=20)
