@@ -1,0 +1,4 @@
+# Abaikan semua cache Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
